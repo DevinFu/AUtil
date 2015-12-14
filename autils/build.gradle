@@ -5,18 +5,13 @@ apply plugin: 'com.jfrog.bintray'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
+    resourcePrefix "autil_"
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 2
-        versionName "1.01"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+        versionCode 4
+        versionName "1.0.4"
     }
 }
 
@@ -28,7 +23,7 @@ dependencies {
 def siteUrl = 'https://github.com/DevinFu/AUtil'      // 项目的主页
 def gitUrl = 'https://github.com/DevinFu/AUtil.git'   // Git仓库的url
 group = "com.frozy"
-version = '1.0.1'
+version = '1.0.4'
 
 install {
     repositories.mavenInstaller {

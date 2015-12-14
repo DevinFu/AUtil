@@ -52,7 +52,8 @@ public class CrashHandler implements UncaughtExceptionHandler {
             if (!handled) {
                 mDefaultHandler.uncaughtException(thread, ex);
             }
-        } else {
+        }
+        else {
             mDefaultHandler.uncaughtException(thread, ex);
         }
     }
@@ -94,7 +95,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
         printWriter.close();
 
         mDeviceCrashInfo.put("STACK_TRACE", result);
-
     }
 
 
@@ -105,6 +105,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
          *
          * @param ex       Exception that caused the crash event.
          * @param crashLog Contains device information and exception details
+         * @return If consumed, return {@code true}, otherwise, return {@code false}
          */
         boolean onCrash(Throwable ex, String crashLog);
     }

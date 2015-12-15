@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 5
+        versionName "1.0.5"
     }
 }
 
@@ -23,7 +23,7 @@ dependencies {
 def siteUrl = 'https://github.com/DevinFu/AUtil'      // 项目的主页
 def gitUrl = 'https://github.com/DevinFu/AUtil.git'   // Git仓库的url
 group = "com.frozy"
-version = '1.0.4'
+version = '1.0.5'
 
 install {
     repositories.mavenInstaller {

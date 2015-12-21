@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.Checkable;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 /**
@@ -215,5 +216,10 @@ public class BaseViewHolder {
         this.associatedObject = associatedObject;
     }
 
+    public BaseViewHolder setProgress(int viewId, int progress) {
+        ProgressBar view = getView(viewId);
+        view.setProgress(progress);
+        return this;
+    }
 
 }

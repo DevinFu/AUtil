@@ -10,20 +10,21 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 5
-        versionName "1.0.5"
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/pinyin4j-2.5.0.jar')
 }
 
 def siteUrl = 'https://github.com/DevinFu/AUtil'      // 项目的主页
 def gitUrl = 'https://github.com/DevinFu/AUtil.git'   // Git仓库的url
-group = "com.frozy"
-version = '1.0.5'
+group = GROUP_NAME
+version = VERSION_NAME
 
 install {
     repositories.mavenInstaller {

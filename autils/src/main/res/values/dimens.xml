@@ -1,8 +1,10 @@
 <resources>
 
+    <dimen name="autil_text_mini">8sp</dimen>
     <dimen name="autil_text_small">12sp</dimen>
     <dimen name="autil_text_normal">16sp</dimen>
     <dimen name="autil_text_large">20sp</dimen>
+    <dimen name="autil_text_super">24sp</dimen>
 
     <dimen name="autil_drawable_min">18dp</dimen>
     <dimen name="autil_drawable_small">24dp</dimen>

@@ -1,0 +1,19 @@
+<resources>
+
+    <dimen name="autil_text_mini">12sp</dimen>
+    <dimen name="autil_text_small">18sp</dimen>
+    <dimen name="autil_text_normal">24sp</dimen>
+    <dimen name="autil_text_large">30sp</dimen>
+    <dimen name="autil_text_super">36sp</dimen>
+
+    <dimen name="autil_drawable_min">27dp</dimen>
+    <dimen name="autil_drawable_small">36dp</dimen>
+    <dimen name="autil_drawable_normal">54dp</dimen>
+    <dimen name="autil_drawable_large">90dp</dimen>
+
+    <dimen name="autil_margin_mini">5dp</dimen>
+    <dimen name="autil_margin_small">12dp</dimen>
+    <dimen name="autil_margin_middle">24dp</dimen>
+    <dimen name="autil_margin_large">48dp</dimen>
+
+</resources>

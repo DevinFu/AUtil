@@ -214,6 +214,10 @@ public class CommonUtils {
         return ProvidersName;
     }
 
+	/**
+	 * 生成唯一的viewId
+	 * @return 唯一的viewId
+	 */
 	public static int generateViewId() {
 		if (Build.VERSION.SDK_INT < 17) {
 			for (; ; ) {

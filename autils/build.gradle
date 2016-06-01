@@ -13,6 +13,10 @@ android {
         versionCode VERSION_CODE.toInteger()
         versionName VERSION_NAME
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {

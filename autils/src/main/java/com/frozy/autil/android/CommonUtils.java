@@ -5,17 +5,22 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.telephony.TelephonyManager;
+import android.view.View;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @SuppressWarnings("unused")
 public class CommonUtils {
+
+	private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
     /**
      * if the network is available
@@ -208,4 +213,22 @@ public class CommonUtils {
         else if (imsi.startsWith("46003")) ProvidersName = "中国电信";
         return ProvidersName;
     }
+
+	public static int generateViewId() {
+		if (Build.VERSION.SDK_INT < 17) {
+			for (; ; ) {
+				final int result = sNextGeneratedId.get();
+				// aapt-generated IDs have the high byte nonzero; clamp to the range under that.
+				int newValue = result + 1;
+				if (newValue > 0x00FFFFFF)
+					newValue = 1; // Roll over to 1, not 0.
+				if (sNextGeneratedId.compareAndSet(result, newValue)) {
+					return result;
+				}
+			}
+		}
+		else {
+			return View.generateViewId();
+		}
+	}
 }
